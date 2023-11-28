@@ -18,7 +18,13 @@ module.exports = {
       );
       process.exit();
     } else {
-      process.stdout.write("Nope. Guess again!\nIs the number ... ");
+      process.stdout.write("Nope. Guess again!\n");
+      if (input < secretValue) {
+        process.stdout.write("Secret number is greater than your input\n");
+      } else {
+        process.stdout.write("Secret number is lower than your input\n");
+      }
+      process.stdout.write("Is the number ... \n");
     }
   },
 };
